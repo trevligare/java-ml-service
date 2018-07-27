@@ -57,7 +57,7 @@
     <tstamp/>
     <property name="javac.includeAntRuntime" value="true"/>
     <property name="javac.includeJavaRuntime" value="false"/>
-    <property name="javac.fork" value="false"/>
+    <property name="javac.fork" value="true"/>
   </target>
   <target name="build" depends="init">
     <mkdir dir="${javac.dest}"/>
@@ -120,7 +120,7 @@
   </target>
 
   <target name="run" depends="init, clean, jar">
-    <java jar="${dist.dir}/trevligare-server-${version}.jar">
+    <java jar="${dist.dir}/trevligare-server-${version}.jar" fork="${javac.fork}">
     </java>
   </target>
 </project>

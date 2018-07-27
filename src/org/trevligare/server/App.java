@@ -19,7 +19,7 @@ import java.io.IOException;
 
 public final class App {
   public static void main(final String... args) throws ClassNotFoundException, IOException {
-    HateThreaitSentence model = new HateThreatSentence("config.properties");
+    HateThreatSentence model = new HateThreatSentence("config.properties");
     int port = 8080;
     if (System.getenv("PORT") != null) port = Integer.parseInt(System.getenv("PORT"));
     new FtBasic(
